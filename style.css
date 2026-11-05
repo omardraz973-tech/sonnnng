@@ -1,0 +1,268 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e1f2b, #2b3040);
+    color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+
+a {
+    color: #ffffff; 
+    text-decoration: none; 
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #4f8cff; 
+}
+
+
+a:active {
+    color: #00e0a1; 
+}
+
+
+.artist-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;   
+    padding: 20px;
+}
+
+.artist-card {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.artist-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    border-color: #00c2ff;
+}
+
+.artist-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border: 3px solid #4f8cff;
+}
+
+.artist-name {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #c8d6ff;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    max-width:500px;
+    margin: 40px auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    padding: 25px 18px;
+    border: 2px solid #4f8cff;
+}
+
+.bio {
+    font-weight: bold;
+    color: #00c2ff;
+    font-size: 1em;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.songs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.songs > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.song-title {
+    min-width: 120px;
+    margin-right: 16px;
+    margin-bottom: 6px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+.songs audio {
+    background: linear-gradient(90deg, #4f8cff 0%, #00c2ff 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(79,70,229,0.18);
+    width: 260px;
+    height: 44px;
+    border: 2px solid #4f8cff;
+    outline: none;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+
+.songs audio:focus, 
+.songs audio:hover {
+    box-shadow: 0 6px 24px rgba(79,70,229,0.3);
+    border: 2px solid #00c2ff;
+}
+
+h2 {
+    color: #c8d6ff;
+    font-size: 2.2em;
+    margin-bottom: 12px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Search Box */
+.searchBox {
+    display: flex;
+    max-width: 320px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    position: relative;
+    margin-top: 2px;
+}
+
+.searchButton {
+    color: white;
+    position: absolute;
+    right: 8px;
+    width: 90px;
+    height: 50px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #00c2ff 0%, #4f8cff 100%);
+    border: 0;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #1a1a1a;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    padding: 24px 46px 24px 26px;
+    max-width: 220px;
+}
+
+/* From Uiverse.io by karthik092726122003 */ 
+.styled-wrapper .button {
+  display: block;
+  position: relative;
+  width: 76px;
+  height: 76px;
+  margin: 0;
+  overflow: hidden;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+}
+
+.styled-wrapper .button:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 7px;
+  border: 3px solid black; 
+  transition:
+    opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.styled-wrapper .button:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 7px;
+  border: 4px solid #599a53;
+  transform: scale(1.3);
+  transition:
+    opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+}
+
+.styled-wrapper .button:hover:before,
+.styled-wrapper .button:focus:before {
+  opacity: 0;
+  transform: scale(0.7);
+  transition:
+    opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.styled-wrapper .button:hover:after,
+.styled-wrapper .button:focus:after {
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.styled-wrapper .button-box {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.styled-wrapper .button-elem {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 24px 18px 0 22px;
+  transform: rotate(360deg);
+  fill: #ffffff;
+}
+
+.styled-wrapper .button:hover .button-box,
+.styled-wrapper .button:focus .button-box {
+  transition: 0.4s;
+  transform: translateX(-69px); 
+}
